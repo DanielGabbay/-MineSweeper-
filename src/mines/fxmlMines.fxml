@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mines.MinesController">
+   <children>
+      <Pane layoutX="-1.0" layoutY="-6.0" prefHeight="799.0" prefWidth="393.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="211.0" layoutX="14.0" layoutY="187.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="356.0">
+         <fill>
+            <LinearGradient cycleMethod="REPEAT" endY="1.0">
+               <stops>
+                  <Stop color="#2b5e8d" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="800.0" fitWidth="1280.0" opacity="0.12">
+         <image>
+            <Image url="@../images/Background.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="384.0" layoutY="-3.0" prefHeight="802.0" prefWidth="894.0">
+         <children>
+            <Button fx:id="exitBtn" layoutX="772.0" layoutY="9.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="96.0" style="-fx-font-size: 32;" text="Exit">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="98.0" fitWidth="101.0" layoutX="395.0" layoutY="10.0">
+               <image>
+                  <Image url="@../images/logoPic.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" ellipsisString="" layoutX="24.0" layoutY="69.0" prefHeight="55.0" prefWidth="149.0" text="Created By Daniel Gabbay ©" textAlignment="CENTER" textFill="#a64a4a" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="47.0" fitWidth="167.0" layoutX="14.0" layoutY="17.0" onMouseClicked="#openLinkedIn">
+               <image>
+                  <Image url="@../images/logoLinked.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf26" height="789.0" layoutX="9.0" layoutY="5.0" stroke="BLACK" strokeType="INSIDE" width="372.0" />
+      <ImageView fitHeight="190.0" fitWidth="366.0" layoutX="12.0" layoutY="4.0">
+         <image>
+            <Image url="@../images/logoName.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="26.0" layoutY="193.0" prefHeight="578.0" prefWidth="334.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="287.2222595214844" minHeight="10.0" prefHeight="202.77777099609375" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="377.0" minHeight="60.592620849609375" prefHeight="80.29629516601562" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="342.0371398925781" minHeight="0.0" prefHeight="24.518463134765625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="342.0371398925781" minHeight="10.0" prefHeight="273.4815368652344" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane prefHeight="181.0" prefWidth="275.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.4814910888672" minWidth="10.0" prefWidth="111.1851806640625" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.8148193359375" minWidth="10.0" prefWidth="222.8148193359375" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="txtWidth" alignment="CENTER" prefHeight="65.0" prefWidth="172.0" promptText="Board width" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Segoe UI Black" size="30.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtHeight" alignment="CENTER" prefHeight="63.0" prefWidth="172.0" promptText="Board height" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Segoe UI Black" size="30.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtMines" alignment="CENTER" prefHeight="63.0" prefWidth="172.0" promptText="No. mines" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Segoe UI Black" size="30.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lblWidth" prefHeight="65.0" prefWidth="162.0" text="Width" wrapText="true">
+                     <font>
+                        <Font name="Cambria" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblWidth11" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="64.0" prefWidth="164.0" text="Height" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Cambria" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblWidth111" contentDisplay="CENTER" prefHeight="64.0" prefWidth="197.0" text="Mines" textAlignment="CENTER" textFill="RED" wrapText="true" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Cambria" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <Pane prefHeight="67.0" prefWidth="334.0" GridPane.rowIndex="1">
+               <children>
+                  <Button fx:id="btnReset" layoutX="9.0" layoutY="14.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="318.0" text="Set / Reset the board">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane prefHeight="273.0" prefWidth="418.0" GridPane.rowIndex="3">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66000029" height="205.0" layoutX="-14.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" width="358.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="91.0" layoutX="-8.0" layoutY="183.0" opacity="0.36" stroke="BLACK" strokeType="INSIDE" width="347.0" />
+                  <ImageView fitHeight="68.0" fitWidth="73.0" layoutX="43.0" layoutY="96.0">
+                     <image>
+                        <Image url="@../images/flag.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="txtNumOfFlags" alignment="TOP_CENTER" layoutX="122.0" layoutY="95.0" prefHeight="74.0" prefWidth="71.0" text="0">
+                     <font>
+                        <Font name="FrankRuehl" size="57.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="74.0" layoutX="119.0" layoutY="95.0" opacity="0.36" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+                  <Group />
+                  <Group layoutX="43.0" layoutY="-10.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d0d0d0" height="74.0" layoutX="3.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="214.0" />
+                        <Label fx:id="txtTimer" alignment="TOP_CENTER" layoutX="73.0" layoutY="-2.0" prefHeight="74.0" prefWidth="87.0" text="0" textFill="#0026ff">
+                           <font>
+                              <Font name="FrankRuehl" size="57.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="164.0" layoutY="29.0" prefHeight="38.0" prefWidth="43.0" text="sec" textAlignment="CENTER">
+                           <font>
+                              <Font name="FrankRuehl" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="sandClockOn" fitHeight="71.0" fitWidth="65.0" layoutX="12.0" layoutY="-1.0">
+                           <image>
+                              <Image url="@../images/sandclock.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="sandClockOff" fitHeight="71.0" fitWidth="65.0" layoutX="12.0" layoutY="-1.0">
+                           <image>
+                              <Image url="@../images/‏‏sandclockStop.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Group>
+                  <Group />
+                  <GridPane alignment="CENTER" layoutX="-12.0" layoutY="198.0" prefHeight="73.0" prefWidth="354.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.96297454833984" minWidth="0.0" prefWidth="235.51856231689453" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="46.2962646484375" minHeight="10.0" prefHeight="29.7037353515625" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="94.88885498046875" minHeight="10.0" prefHeight="78.2962646484375" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="txtStatus" alignment="CENTER" contentDisplay="CENTER" prefHeight="150.0" prefWidth="295.0" textAlignment="CENTER" textFill="#4907ff" textOverrun="CLIP" wrapText="true" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="3.0" prefHeight="36.0" prefWidth="278.0" text="Status:" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+      <Group>
+         <children>
+            <Pane fx:id="gamePaneBack" layoutX="410.0" layoutY="131.0" prefHeight="650.0" prefWidth="850.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="650.0" stroke="BLACK" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="6.0" width="850.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="650.0" opacity="0.15" stroke="BLACK" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="6.0" width="850.0" />
+               </children>
+            </Pane>
+         </children>
+      </Group>
+   </children>
+</AnchorPane>

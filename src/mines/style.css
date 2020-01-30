@@ -1,0 +1,13 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.button{
+	-fx-font-size: 20;
+	-fx-font-family: helvetica;
+	-fx-font-weight: bold;
+	-fx-padding: 0;
+}
+
+.button:disabled {
+	-fx-border-color: rgb(210,210,210);
+	-fx-background-color: rgb(245,245,245);
+	-fx-opacity: 1.0 ;
+}
