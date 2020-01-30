@@ -1,5 +1,5 @@
 # -MineSweeper-
-💥Implementation of a minesweeper game.💥
+💥Implementation of a minesweeper game💥
 -------
 ■ Implementation of a minesweeper game.
 ■ Users can select the width, height, and number of mines.
